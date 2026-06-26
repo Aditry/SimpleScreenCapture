@@ -1,8 +1,12 @@
-cmake_minimum_required(VERSION 4.2)
-project(simplescreencapture)
+cmake_minimum_required(VERSION 3.20)
 
-set(CMAKE_CXX_STANDARD 20)
+project(simplescreencapture LANGUAGES CXX)
 
-add_library(${PROJECT_NAME} INTERFACE)
-target_include_directories(${PROJECT_NAME} INTERFACE ./include)
+add_library(ssc INTERFACE)
+
+target_compile_features(ssc INTERFACE cxx_std_20)
+
+target_include_directories(ssc INTERFACE
+        ${CMAKE_CURRENT_SOURCE_DIR}/include
+)
 
