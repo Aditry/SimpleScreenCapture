@@ -1,6 +1,6 @@
 #pragma once
 #include <windows.h>
-#include "ScreenCapture.hpp"
+#include "../ScreenCapture.hpp"
 #include <vector>
 
 namespace ssc {
